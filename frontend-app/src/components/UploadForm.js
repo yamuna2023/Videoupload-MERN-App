@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './index.css'
+import { useNavigate } from 'react-router-dom';
 const UploadForm = () => {
+    const navigation = useNavigate()
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
@@ -23,7 +25,8 @@ const UploadForm = () => {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            alert('Upload successful!');
+            alert('Upload successful!',);
+            navigation('/')
         } catch (error) {
             console.error('Error uploading media:', error);
         }

@@ -40,7 +40,7 @@
     
 }
 .container3 {
-    background-color: rgb(239, 240, 242);
+    background-color: rgb(150, 206, 252);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -76,7 +76,7 @@
     border-width: 0px;
     font-size: 12px;
     font-weight: bold;
-    cursor: 'pointer';
+    cursor: pointer;
     margin-top: 10px;
     padding: 10px; 
     padding-left: 30px;
