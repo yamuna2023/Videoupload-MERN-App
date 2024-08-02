@@ -58,7 +58,7 @@ const MediaList = () => {
                             <div 
                                 onClick={() => getDetails(media.id)}
                             >
-                                <img src={media.thumbnailUrl} alt={media.title} height='130' />
+                                <img src={media.thumbnailUrl} alt={media.title} style={{ borderRadius: 15 }} height='130'width="100%" />
                                 <h2 style={{color:'white',fontSize:25,fontWeight:'bold'}}>{media.title}</h2>
                             </div>
                            

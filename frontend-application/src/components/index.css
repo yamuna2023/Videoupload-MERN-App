@@ -47,9 +47,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    height: 30vh;
-    width: 25vh;
+    width: 15%;
     margin: 5px;
+    border-radius: 12px;
     
 }
 .mainheading {
