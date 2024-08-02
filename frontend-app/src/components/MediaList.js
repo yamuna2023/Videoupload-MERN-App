@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
+import { useNavigate } from 'react-router-dom';
 const MediaList = () => {
+    const navigation = useNavigate()
     const [mediaList, setMediaList] = useState([]);
     useEffect(() => {
         const fetchMedia = async () => {
@@ -17,8 +19,6 @@ const MediaList = () => {
         fetchMedia();
     }, []);
 
-
-
     
 
     const getDetails = (id) => {
@@ -28,6 +28,7 @@ const MediaList = () => {
         <div className='container'>
             <h1 className='heading'>Media list</h1>
             <button 
+             onClick={()=>navigation('/upload')}
             style={{
                 backgroundColor: "#0062ff",
                 color: 'white',
