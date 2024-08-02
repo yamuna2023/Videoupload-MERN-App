@@ -10,7 +10,7 @@ const MediaList = () => {
     useEffect(() => {
         const fetchMedia = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/media');
+                const response = await axios.get('https://videoupload-mern-app-1.onrender.com/media');
                 setMediaList(response.data);
             } catch (error) {
                 console.error('Error fetching media list:', error);

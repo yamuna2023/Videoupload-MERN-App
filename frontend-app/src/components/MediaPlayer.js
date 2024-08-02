@@ -11,7 +11,7 @@ console.log(id,'<-----')
     useEffect(() => {
         const fetchMedia = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/media/${id}`);
+                const response = await axios.get(`https://videoupload-mern-app-1.onrender.com/media/${id}`);
                 setMedia(response.data);
             } catch (error) {
                 console.error('Error fetching media:', error);

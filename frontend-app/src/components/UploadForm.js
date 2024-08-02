@@ -20,7 +20,7 @@ const UploadForm = () => {
         formData.append('video', video);
         console.log(formData)
         try {
-            await axios.post('http://localhost:5000/upload', formData, {
+            await axios.post('https://videoupload-mern-app-1.onrender.com/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
