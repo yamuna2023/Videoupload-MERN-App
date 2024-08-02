@@ -1,0 +1,115 @@
+.commontextinpustyle {
+    background-color: white;
+    color: #fff;
+    border: 0.5px;
+    outline: navy;
+    height: 20px;
+    color: #0f172a;
+    border-radius: 2px;
+    width: 85%;
+    padding: 7px;
+    border: 0.5px solid rgb(194, 198, 202);
+    margin-bottom: 5px;
+    
+}
+.commonparagraph{
+    text-align: left;
+    margin-bottom: 5PX;
+}
+.container {
+    background-color: rgb(87, 157, 254);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    height: 100vh;
+}
+
+.innercontainer2 {
+    background-color: rgb(239, 240, 242);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20%;
+    border-radius: 7px;
+    border: 0.5px solid rgb(194, 198, 202);
+    height: auto;
+    padding: 10px;
+    
+}
+.container3 {
+    background-color: rgb(239, 240, 242);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    height: 30vh;
+    width: 25vh;
+    margin: 5px;
+    
+}
+.mainheading {
+    font-size: 45px;
+    font-weight: normal;
+    color: rgb(18, 18, 18);
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.commonparagraph {
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+.buttonstyle{
+    background-color: #0062ff;
+    color: white;
+
+    border-width: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: 'pointer';
+    margin-top: 10px;
+    padding: 10px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px; 
+    width:fit-content;
+    margin-bottom: 5px;
+    
+}
+.upload-container {
+    background-color: rgb(87, 157, 254);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 100vh;
+}
+
+.uploadinner-container{
+    background-color: rgb(252, 253, 254);
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    border: 0.5px solid rgb(194, 198, 202);
+    height: auto;
+    padding: 10px;
+    width: 60vw;
+}
+
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
