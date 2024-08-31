@@ -1,5 +1,5 @@
 // frontend/src/components/UploadForm.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.css'
 import { useNavigate } from 'react-router-dom';
@@ -9,23 +9,34 @@ const UploadForm = () => {
     const [description, setDescription] = useState('');
     const [thumbnail, setThumbnail] = useState(null);
     const [video, setVideo] = useState(null);
+    const [showLoader, setShowLoader] = useState(false)
+    const [isdisable, setisdisable] = useState(true)
 
+    useEffect(() => {
+        if (title !== '' && description !== '' && thumbnail !== '', video !== '') {
+            setisdisable(false)
+        }
+    }, [title, description, thumbnail, video])
+
+    useEffect(() => { 
+        setisdisable(true)
+        setShowLoader(false) }, [])
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setShowLoader(true);
         const formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
         formData.append('thumbnail', thumbnail);
         formData.append('video', video);
-        console.log(formData)
         try {
             await axios.post('https://videoupload-mern-app-1.onrender.com/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            alert('Upload successful!',);
+            alert('Upload successful!');
             navigation('/')
         } catch (error) {
             console.error('Error uploading media:', error);
@@ -82,7 +93,9 @@ const UploadForm = () => {
 
                         />
                     </div>
-                    <button className='buttonstyle' type="submit">Upload</button>
+                    <button disabled={isdisable} style={{ backgroundColor: isdisable ? 'grey' : '#0062ff' }} className='buttonstyle' type="submit">
+                        {showLoader ? 'Loading...' : 'Upload'}
+                    </button>
                 </div>
             </form>
         </div>
